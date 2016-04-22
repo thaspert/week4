@@ -4,6 +4,16 @@ class MoviesController < ApplicationController
     @movies = Movie.all
   end
 
+  def create
+    m = Movie.new
+    m.title = params[:title]
+    m.plot = params[:plot]
+    m.image_url = params[:image_url]
+    m.year = params[:year]
+    m.save
+    redirect_to "http://localhost:3000/movies"
+  end
+
   def show
     @movie = Movie.find_by(id: params[:id])
     if @movie == nil
