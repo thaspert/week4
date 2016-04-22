@@ -1,13 +1,13 @@
 <% @movies.each do |movie| %>
 
   <div class="movie-box">
-    <a href="#" data-id="<%= movie.id %>"><%= image_tag movie.image_url %></a>
+    <a href="/movies/<%= movie.id %>" data-id="<%= movie.id %>"><%= image_tag movie.image_url %></a>
     <h3><a href="#"><%= movie.title %></a></h3>
   </div>
 
 <% end %>
 
-<!-- 
+<!--
 <div class="movie-box">
   <a href="/movies/new"><%= image_tag 'add_new.png' %></a>
 </div> -->
