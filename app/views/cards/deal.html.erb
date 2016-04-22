@@ -1,0 +1,9 @@
+<h1>Poker</h1>
+
+<% values = ['ace', 'king', 'queen', 'jack', '10', '9', '8', '7', '6', '5', '4', '3', '2']
+suits = ['hearts', 'diamonds', 'clubs', 'spades']
+deck = values.product(suits) %>
+
+<% deck.sample(5).each do |cards| %>
+  <%= image_tag "#{cards[0]}_of_#{cards[1]}.png", :width => "100" %>
+<% end %>

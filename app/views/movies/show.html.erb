@@ -1,0 +1,13 @@
+<h1>
+  <%= @movie.title %>
+  <small><a href="/movies/<%= @movie.id %>/edit">Edit This Movie</a>
+  
+  <a href="/movies/<%= @movie.id %>/delete">Delete This Movie</a></small>
+
+</h1>
+
+<p><strong>Directed By:</strong> Cookie Monster</p>
+<p><strong>Released:</strong><%= @movie.year %></p>
+<p><strong>Plot:</strong><%= @movie.plot %></p>
+
+<p><%= image_tag @movie.image_url %></p>
