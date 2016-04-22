@@ -13,11 +13,19 @@
 
 ActiveRecord::Schema.define(version: 0) do
 
+  create_table "directors", force: :cascade do |t|
+    t.text "name"
+    t.text "poster_url"
+  end
+
   create_table "movies", force: :cascade do |t|
     t.text    "title"
     t.integer "year"
     t.text    "plot"
     t.text    "image_url"
+    t.integer "director_id"
   end
+
+  add_index "movies", ["director_id"], name: "index_movies_on_director_id"
 
 end

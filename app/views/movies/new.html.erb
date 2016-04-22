@@ -3,9 +3,11 @@
 <form action="/movies/create">
 
   <p>
-    <label for="title">Title:</label>
+    <!-- <label for="title">Title:</label> -->
+    <%= label_tag :title, "Movie Title" %>
     <br>
-    <input id="title" size="80" type="text" name="title">
+    <!-- <input id="title" size="80" type="text" name="title"> -->
+    <%= text_field_tag :title, "", :size => 80 %>
   </p>
   <p>
     <label for="year">Year:</label>

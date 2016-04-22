@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   end
 
   def create
+    # m = Movie.create :title => "Apollo 13", :year => 1995
     m = Movie.new
     m.title = params[:title]
     m.plot = params[:plot]

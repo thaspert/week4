@@ -3,7 +3,11 @@ Movie
   year: integer
   plot: text
   image_url: text
-
+  director_id: integer
+  
+Director
+  name: text
+  poster_url: text
 
 # Example table for a typical Book model.
 #
