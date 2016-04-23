@@ -6,11 +6,11 @@ Rails.application.routes.draw do
   get '/directors/:id' => 'directors#show'
 
   get '/movies/new' => 'movies#new'
-  get '/movies/create' => 'movies#create'
-  get '/movies/:id' => 'movies#show'
+  post '/movies' => 'movies#create'
   get '/movies' => 'movies#index'
-  get '/movies/:id/delete' => 'movies#destroy'
+  get '/movies/:id' => 'movies#show'
+  delete '/movies/:id' => 'movies#destroy'
+  patch '/movies/:id' => 'movies#update'
   get '/movies/:id/edit' => 'movies#edit'
-  get '/movies/:id/update' => 'movies#update'
 
 end

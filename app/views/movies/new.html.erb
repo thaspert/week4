@@ -1,6 +1,7 @@
 <h2>Add a New Movie</h2>
 
-<form action="/movies/create">
+<!-- <form action="/movies" method="post"> -->
+<%= form_tag "/movies", :method => :post do %>
 
   <p>
     <!-- <label for="title">Title:</label> -->
@@ -39,4 +40,4 @@
 
   <input type="submit" value="Add Movie">
 
-</form>
+<% end %>

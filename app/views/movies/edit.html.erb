@@ -1,6 +1,7 @@
 <h2>Edit Movie #<%= @movie.id %></h2>
 
-<form action="/movies/<%= @movie.id %>/update">
+<!-- <form action="/movies/<%= @movie.id %>/update"> -->
+<%= form_tag "/movies/#{@movie.id}", :method => :patch do %>
 
   <p>
     <label for="title">Title:</label>
@@ -27,4 +28,4 @@
 
   <input type="submit" value="Update Movie">
 
-</form>
+<% end %>

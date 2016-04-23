@@ -2,7 +2,8 @@
   <%= @movie.title %>
   <small><a href="/movies/<%= @movie.id %>/edit">Edit This Movie</a>
 
-  <a href="/movies/<%= @movie.id %>/delete">Delete This Movie</a></small>
+  <!-- <a href="/movies/<%= @movie.id %>">Delete This Movie</a></small> -->
+  <%= link_to "Delete This Movie", "/movies/#{@movie.id}", :method => :delete %>
 
 </h1>
 
