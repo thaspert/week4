@@ -9,6 +9,16 @@
     <!-- <input id="title" size="80" type="text" name="title"> -->
     <%= text_field_tag :title, "", :size => 80 %>
   </p>
+
+  <p>
+    <select name="director_id">
+      <% Director.all.each do |d| %>
+        <option value="<%= d.id %>"><%= d.name %></option>
+      <% end %>
+    </select>
+  </p>
+
+
   <p>
     <label for="year">Year:</label>
     <br>

@@ -1,3 +1,7 @@
+<div class="movie-box">
+  <a href="/movies/new"><%= image_tag 'add_new.png' %></a>
+</div>
+
 <% @movies.each do |movie| %>
 
   <div class="movie-box">
@@ -6,8 +10,3 @@
   </div>
 
 <% end %>
-
-
-<div class="movie-box">
-  <a href="/movies/new"><%= image_tag 'add_new.png' %></a>
-</div>
